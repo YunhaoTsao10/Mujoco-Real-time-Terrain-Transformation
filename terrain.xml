@@ -1,0 +1,23 @@
+<mujoco model="heightfield model">
+    <include file="h1.xml"/>
+    <size nconmax="200" njmax="200" nstack="500000"/>
+    <statistic center="0 0 1" extent="1.8"/>
+    <visual>
+    	<headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    	<rgba haze="0.15 0.25 0.35 1"/>
+    	<global azimuth="160" elevation="-20" />
+    </visual>
+
+    <compiler angle="radian" coordinate="local"/>
+
+    <asset>
+        <!-- Define a height field (hfield) asset from a PNG image -->
+        <hfield name="hfield_asset" file="heightmap.bin" size="5 5 1 1" /> <!-- 缩小地形数据 -->
+    </asset>
+
+    <worldbody>
+    	<light pos="0 0 3.5" dir="0 0 -1" directional="true"/>
+        <!-- Place the height field in the world -->
+        <geom name="ground" type="hfield" hfield="hfield_asset" size="0.002 0.002 0.5" rgba="0.8 0.52 0.25 1" /> <!-- 缩小显示尺寸 -->
+    </worldbody>
+</mujoco>
