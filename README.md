@@ -12,6 +12,7 @@
 
 ## 相机点云数据生成mujoco地形示例（不开源）：Demo for converting live point cloud data to hfield data(not open sourced):
 
-![12月10日](https://github.com/user-attachments/assets/d2e89450-462a-4b38-b6e6-1458c5cb061d)
+![pcl2hfield](https://github.com/user-attachments/assets/fc3abe86-3eed-4769-a615-d10c7b512360)
+
 
 
